@@ -1,28 +1,44 @@
 # Computing / Algorithms
 
-A collection of implementations in scientific computing, 
+A collection of implementations in scientific computing,
 signal processing, and numerical methods.
+
+---
+
+## Implementations
+
+| File | Topic | Description |
+|------|-------|-------------|
+| `dft_slow.py` | Signal Processing | Naive O(n²) DFT implementation |
+| `grapher.py` | Utility | Plotting helper — used across projects |
 
 ---
 
 ## DFT (Discrete Fourier Transform)
 
 **File:** `dft_slow.py`  
-**What it does:** Naive O(n²) implementation of the Discrete Fourier Transform. Basicall
-**Concepts** Computing the sum -$$X(k) = \sum_{n=0}^{N-1} x(n) \cdot e^{-j2\pi kn/N}$$
-**Note:** Intentionally slow/naive — FFT implementation coming soon for comparison.
+**Concepts:** Signal Processing, Frequency Domain Analysis  
+**What it does:** Naive O(n²) implementation of the Discrete Fourier Transform.
+Computes the inner product of the signal x(n) with sinusoids at each frequency
+k = 0, 1, ..., N-1:
+Equation - X(k) = sum of x(n) * e^(-j2πkn/N) for n = 0 to N-1
+
+**Note:** Intentionally naive — FFT implementation coming soon for direct speed comparison.
 
 ---
 
 ## Grapher Utility
 
 **File:** `grapher.py`  
-**What it does:** Helper functions for plotting — wraps matplotlib,plot multiple graphs
-with the help of a custom plot_multiple_graphs function
-to make generating graphs quicker and cleaner.  
-**Used by:** DFT and future projects in this repo.
+**What it does:** Wraps matplotlib to simplify plotting. Provides a
+`plot_multiple_graphs()` function to plot multiple graphs cleanly in one call.  
+**Used by:** All projects in this repo that require visualization.
 
 ---
 
-## Notes
-Each implementation is standalone
+## Coming Soon
+- FFT implementation and benchmarking against naive DFT
+
+---
+
+*Each implementation is standalone. `grapher.py` is a shared utility.*
