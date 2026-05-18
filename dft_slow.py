@@ -16,7 +16,7 @@ sr  = 100
 ts = 1/sr
 def main():
     t = np.arange(0 , 1 + ts ,ts)
-    x_net = random_sinusoids(100 , t)
+    x_net = random_sinusoids_noise(100 , t)
     N = len(x_net)
     freq_axis = [k * sr / N for k in range(N)]
     frequencies,magnitude = dft(x_net)
@@ -34,6 +34,20 @@ def random_sinusoids(number_of_waves , time_vals):
         freqeuncy = random.randint(2,6)
         resultant_wave += amplitude * np.sin(2 * np.pi * freqeuncy * time_vals)
     return resultant_wave
+"""
+   Functin for generatig random sinousoids with  white noise drawn
+   from a normal distribution
+"""
+def random_sinusoids_noise(number_of_waves, time_vals):
+    resultant_wave = 0
+    for i in range(number_of_waves):
+        amplitude = random.randint(1, 5)
+        frequency = random.randint(2, 6)
+        resultant_wave += amplitude * np.sin(2 * np.pi * frequency * time_vals)
+    
+    # Adding white noise cumsum takes the cumulative some
+    noise = np.cumsum(np.random.normal(loc=0, scale=0.5, size=len(time_vals)))
+    return resultant_wave + noise
 #FUNCTION FOR COMPUTING NAIVE DFT
 """
    input - The signal of which the DFT is to be computed
@@ -50,6 +64,8 @@ def dft(wave):
             value = (wave[n] * np.exp((-1j * 2 * np.pi * k * n)/N))
             total += value
         X.append(total)
+    #Calculating the maginute of since the coefficients are 
+    #... complex in nature(a +  ib)
     magnitude = []
     for i in range(len(X)):
         mags = abs(X[i])
