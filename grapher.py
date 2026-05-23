@@ -50,5 +50,29 @@ def plot_multiple_graphs(*signals, title='Graph'):
     fig.suptitle(title, fontsize=16)
     plt.tight_layout()
     plt.show()
+    
+""" 
+    Function for plottign with x and y axis cleanly
+"""
+def style_plot(ax=None, equal_aspect=False, grid=True):
+    """
+    Adds clean graph-paper styling to a matplotlib plot.
+    """
+    if ax is None:
+        ax = plt.gca()
+
+    # Axes through origin
+    ax.axhline(0, color='black', linewidth=1)
+    ax.axvline(0, color='black', linewidth=1)
+
+    # Grid like graph paper
+    if grid:
+        ax.grid(True, linestyle='--', alpha=0.5)
+
+    # Optional equal scaling (important for phase portraits)
+    if equal_aspect:
+        ax.set_aspect('equal', adjustable='box')
+
+    return ax
 
 ##END##
