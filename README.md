@@ -17,6 +17,7 @@ signal processing, and numerical methods.
 | `rk4.py` | Numerical Methods | Runge-Kutta 4th order ODE solver |
 | `naive_peak_finder.py` | Algorithms | Naive peak finding algorithm |
 | `fraction_class.py` | Data Structures | Fraction class implementation |
+| `sine_calculator.py`| Numerical Methods | Sine calculation using taylor series |
 
 ---
 
