@@ -18,7 +18,7 @@ signal processing, and numerical methods.
 | `naive_peak_finder.py` | Algorithms | Naive peak finding algorithm |
 | `fraction_class.py` | Data Structures | Fraction class implementation |
 | `sine_calculator.py`| Numerical Methods | Sine calculation using taylor series |
-
+| `dynamical systesm` | Numerical Simulations | Simulating and anaylsing dynamical systems |
 ---
 
 
