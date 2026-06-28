@@ -19,6 +19,7 @@ signal processing, and numerical methods.
 | `fraction_class.py` | Data Structures | Fraction class implementation |
 | `sine_calculator.py`| Numerical Methods | Sine calculation using taylor series |
 | `dynamical systesm` | Numerical Simulations | Simulating and anaylsing dynamical systems |
+| `benchmarking` | Utility | Understanding basic benchmarking tools in python |
 ---
 
 
