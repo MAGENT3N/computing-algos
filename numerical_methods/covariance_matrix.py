@@ -43,9 +43,9 @@ def mean(array):
     """
            Description - Calculates the mean of an array
            
-           Parameter   - An array
+           Parameter   - An array -> list
            
-           Returns - The mean of the array
+           Returns - The mean of the array ->float
     """
     total = 0
     for i in range(len(array)):
@@ -61,9 +61,9 @@ def cov(*args):
          riance matrix of the input features.
          
          Parameters - *args where args are the arrays of 
-         the input features
+         the input features -> multiple arrays
          
-         Returns - The covariance matrix of the arrays 
+         Returns - The covariance matrix of the arrays  ->list(matrix)
     """
     array = list(args)
     # Precomputing the mean of each feature
