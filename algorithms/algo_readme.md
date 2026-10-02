@@ -1,4 +1,4 @@
-cat > algorithms/README.md << 'EOF'
+
 # Algorithms
 
 | File | Topic | Description |
