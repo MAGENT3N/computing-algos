@@ -1,26 +1,19 @@
+cat > README.md << 'EOF'
 # Computing / Algorithms
 
-A collection of implementations in scientific computing,
-signal processing, and numerical methods.
+A collection of implementations in scientific computing, numerical methods, and algorithms.
 
 ---
 
-## Implementations
+## Projects
 
-| File | Topic | Description |
-|------|-------|-------------|
-| `dft_slow.py` | Signal Processing | Naive O(n²) DFT implementation |
-| `grapher.py` | Utility | Plotting helper — used across projects |
-| `fast_fib.py` | Algorithms | Fast Fibonacci implementation |
-| `gradient_descent.py` | Optimization | Gradient descent from scratch |
-| `monte_carlo_integration.py` | Numerical Methods | Monte Carlo integration |
-| `rk4.py` | Numerical Methods | Runge-Kutta 4th order ODE solver |
-| `naive_peak_finder.py` | Algorithms | Naive peak finding algorithm |
-| `fraction_class.py` | Data Structures | Fraction class implementation |
-| `sine_calculator.py`| Numerical Methods | Sine calculation using taylor series |
-| `dynamical systesm` | Numerical Simulations | Simulating and anaylsing dynamical systems |
-| `benchmarking` | Utility | Understanding basic benchmarking tools in python |
+| Folder | Topic | Description |
+| ------ | ----- | ----------- |
+| [algorithms](algorithms/) | Algorithms | Two pointers, peak finding, Fibonacci, data structures |
+| [numerical_methods](numerical_methods/) | Numerical Methods | ODE solvers, Monte Carlo, DFT, optimization, benchmarking |
+| [dynamical_systems](dynamical_systems/) | Dynamical Systems | Simulating and analysing Lorenz, Lotka-Volterra, Verhulst and more |
+
 ---
 
-
-*Each implementation is standalone. `grapher.py` is a shared utility.*
+*Each project folder has its own README.*
+EOF
